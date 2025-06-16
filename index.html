@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConvTrave 3.0 | IITD</title>
+  <link rel="icon" type="image/x-icon" href="/img/icon.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .big-hero {
+      background-image: url('img/backdrop.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      background-position: center;
+      color: red;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .round-button {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .round-button:hover {
+      background-color: #0056b3;
+    }
+
+    .file-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .file-container a {
+      margin: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .round-button {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+      }
+    }
+
+    .horizontal-timeline .items {
+      border-top: 3px solid #e9ecef;
+    }
+
+    .horizontal-timeline .items .items-list {
+      display: block;
+      position: relative;
+      text-align: center;
+      padding-top: 70px;
+      margin-right: 0;
+    }
+
+    .horizontal-timeline .items .items-list:before {
+      content: "";
+      position: absolute;
+      height: 36px;
+      border-right: 2px dashed #dee2e6;
+      top: 0;
+    }
+
+    .horizontal-timeline .items .items-list .event-date {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      right: 0;
+      width: 75px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding-top: 8px;
+    }
+
+    @media (min-width: 1140px) {
+      .horizontal-timeline .items .items-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+      }
+
+      .horizontal-timeline .items .items-list .event-date {
+        top: -40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><b>ConvTrace</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#procedure">Procedure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#files">Conversations</a>
+            </li>
+            <li class="nav-item"></li>
+            <a class="nav-link" href="mailto:prottay71@gmail.com">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Big Hero Section -->
+  <section id="hero" class="big-hero text-center">
+    <div class="container">
+      <h1><b>Welcome to ConvTrace</b></h1>
+      <p>Select the file assigned to you & start rating!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">About Us</h2>
+      <p class="text-center">We are a team of researchers working in the field of mental health, broadly on
+        counselling-based therapy, intervention, and psychotherapy using AI and NLP. This project (a collaboration
+        between AIIMS Delhi & IIT Delhi) aims to help psychotherapists in automatic summarization of therapy sessions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Procedure Section -->
+  <section id="procedure" class="section">
+    <div class="container">
+      <h2 class="text-center">Evaluation: Process and Criteria</h2>
+      <p class="text-center">Learn the processes & criterias involved to evaluate the summaries.</p>
+
+      <div class="container-fluid py-5">
+
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="horizontal-timeline">
+
+              <ul class="list-inline items">
+                <li class="list-inline-item items-list">
+                  <div class="px-4">
+                    <div class="event-date badge bg-info">Step 01</div>
+                    <h5 class="pt-2">Select assigned file</h5>
+                    <p class="text-muted">From the following section, select the file assigned to you.</p>
+                    <div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-inline-item items-list">
+                  <div class="px-4">
+                    <div class="event-date badge bg-success">Step 02</div>
+                    <h5 class="pt-2">Read the Conversations</h5>
+                    <p class="text-muted">Read the conversation between the therapist and the patients.
+                    </p>
+                    <div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-inline-item items-list">
+                  <div class="px-4">
+                    <div class="event-date badge bg-warning">Step 04</div>
+                    <h5 class="pt-2">Fill the form</h5>
+                    <p class="text-muted">Rate the generated conversations based on different criteria.</p>
+                    <div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            <table class="table table-bordered table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th>Criterion</th>
+                  <th>Description</th>
+                  <th>Likert Scale (1-5)</th>
+                </tr>
+              </thead>
+                <tbody>
+                <tr>
+                  <td>Comprehensiveness</td>
+                  <td>Extent to which the summary covers all important aspects of the conversation, providing a complete and holistic overview.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Comprehensiveness">
+                    <option value="1">1 - Least Complete</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Fully Complete</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Professionalism</td>
+                  <td>Degree to which the summary maintains a professional tone, language, and demeanor appropriate for a therapeutic context.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Professionalism">
+                    <option value="1">1 - Not Professional</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Professional</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Authenticity</td>
+                  <td>How well the summary reflects the genuine nature and intent of the original conversation, preserving its authenticity.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Authenticity">
+                    <option value="1">1 - Not Authentic</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Authentic</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Safety</td>
+                  <td>Ensures the summary does not include harmful, misleading, or unsafe content and maintains a supportive environment.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Safety">
+                    <option value="1">1 - Unsafe</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Very Safe</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Content</td>
+                  <td>Quality and relevance of the information included in the summary, ensuring it is meaningful and appropriate.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Content">
+                    <option value="1">1 - Poor Content</option>
+                    <option value="2">2 - Below Average</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent Content</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Directiveness</td>
+                  <td>Degree to which the summary provides clear direction or guidance, as appropriate for the context.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Directiveness">
+                    <option value="1">1 - Not Directive</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Directive</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Exploratoriness</td>
+                  <td>Extent to which the summary encourages exploration of thoughts, feelings, or issues, reflecting an open and inquisitive approach.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Exploratoriness">
+                    <option value="1">1 - Not Exploratory</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Exploratory</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Supportiveness</td>
+                  <td>How well the summary conveys empathy, encouragement, and support, fostering a positive therapeutic environment.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Supportiveness">
+                    <option value="1">1 - Not Supportive</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Supportive</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Expressiveness</td>
+                  <td>Clarity and effectiveness in conveying emotions, intentions, and key points within the summary.</td>
+                  <td>
+                  <select class="form-select" aria-label="Likert scale for Expressiveness">
+                    <option value="1">1 - Not Expressive</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Highly Expressive</option>
+                  </select>
+                  </td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- final Section -->
+  <section id="files" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">Conversations</h2>
+      <div class="file-container">
+        <!-- Round buttons for each file -->
+        <a href="final/6.html" class="btn round-button">1</a>
+        <a href="finals/session_4.html" class="btn round-button">4</a>
+        <a href="finals/session_5.html" class="btn round-button">5</a>
+        <a href="finals/session_6.html" class="btn round-button">6</a>
+        <a href="finals/session_9.html" class="btn round-button">9</a>
+        <a href="finals/session_11.html" class="btn round-button">11</a>
+        <a href="finals/session_14.html" class="btn round-button">14</a>
+        <a href="finals/session_15.html" class="btn round-button">15</a>
+        <a href="finals/session_18.html" class="btn round-button">18</a>
+        <a href="finals/session_19.html" class="btn round-button">19</a>
+        <a href="finals/session_20.html" class="btn round-button">20</a>
+        <a href="finals/session_23.html" class="btn round-button">23</a>
+        <a href="finals/session_25.html" class="btn round-button">25
+        <a href="finals/session_27.html" class="btn round-button">27</a>
+        <a href="finals/session_31.html" class="btn round-button">31</a>
+        <a href="finals/session_35.html" class="btn round-button">35</a>
+        <a href="finals/session_38.html" class="btn round-button">38</a>
+        <a href="finals/session_39.html" class="btn round-button">39</a>
+        <a href="finals/session_40.html" class="btn round-button">40</a>
+        <a href="finals/session_42.html" class="btn round-button">42</a>
+        <a href="finals/session_48.html" class="btn round-button">48</a>
+        <a href="finals/session_51.html" class="btn round-button">51</a>
+        <a href="finals/session_52.html" class="btn round-button">52</a>
+        <a href="finals/session_54.html" class="btn round-button">54</a>
+        <a href="finals/session_55.html" class="btn round-button">55</a>
+        <a href="finals/session_58.html" class="btn round-button">58</a>
+        <a href="finals/session_67.html" class="btn round-button">67</a>
+        <a href="finals/session_68.html" class="btn round-button">68</a>
+        <a href="finals/session_73.html" class="btn round-button">73</a>
+        <a href="finals/session_76.html" class="btn round-button">76</a>
+        <a href="finals/session_78.html" class="btn round-button">78</a>
+        <a href="finals/session_85.html" class="btn round-button">85</a>
+        <a href="finals/session_90.html" class="btn round-button">90</a>
+        <a href="finals/session_92.html" class="btn round-button">92</a>
+        <a href="finals/session_93.html" class="btn round-button">93</a>
+        <a href="finals/session_95.html" class="btn round-button">95</a>
+        <a href="finals/session_100.html" class="btn round-button">100</a>
+        <a href="finals/session_104.html" class="btn round-button">104</a>
+        <a href="finals/session_105.html" class="btn round-button">105</a>
+        <a href="finals/session_106.html" class="btn round-button">106</a>
+        <a href="finals/session_115.html" class="btn round-button">115</a>
+        <a href="finals/session_119.html" class="btn round-button">119</a>
+        <a href="finals/session_122.html" class="btn round-button">122</a>
+        <a href="finals/session_123.html" class="btn round-button">123</a>
+        <a href="finals/session_128.html" class="btn round-button">128</a>
+        <a href="finals/session_131.html" class="btn round-button">131</a>
+        <a href="finals/session_136.html" class="btn round-button">136</a>
+        <a href="finals/session_139.html" class="btn round-button">139</a>
+        <a href="finals/session_141.html" class="btn round-button">141</a>
+        <a href="finals/session_143.html" class="btn round-button">143</a>
+        <a href="finals/session_150.html" class="btn round-button">150</a></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3 text-center">
+    <div class="container">
+      <p>&copy; 2025 <a style="text-decoration: none;" href="https://lcs2.in">LCS2@IITD</a> | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
