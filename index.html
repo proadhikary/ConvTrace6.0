@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ConvTrave 6.0 | IITD</title>
+  <title>ConvTrave 3.0 | IITD</title>
   <link rel="icon" type="image/x-icon" href="/img/icon.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -200,52 +200,134 @@
                 <tr>
                   <th>Criterion</th>
                   <th>Description</th>
+                  <th>Likert Scale (1-5)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Comprehensiveness</td>
-                  <td>Extent to which the conversation covers all important aspects of the conversation, providing a complete
-                    and a holistic overview.</td>
+                  <td>Extent to which the summary covers all important aspects of the conversation, providing a complete
+                    and holistic overview.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Comprehensiveness">
+                      <option value="1">1 - Least Complete</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Fully Complete</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Professionalism</td>
-                  <td>Degree to which the conversation maintains a professional tone, language, and demeanor appropriate for
+                  <td>Degree to which the summary maintains a professional tone, language, and demeanor appropriate for
                     a therapeutic context.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Professionalism">
+                      <option value="1">1 - Not Professional</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Professional</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Authenticity</td>
-                  <td>How well the conversation reflects the genuine nature and intent of the original conversation,
+                  <td>How well the summary reflects the genuine nature and intent of the original conversation,
                     preserving its authenticity.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Authenticity">
+                      <option value="1">1 - Not Authentic</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Authentic</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Safety</td>
-                  <td>Ensures the conversation does not include harmful, misleading, or unsafe content and maintains a
+                  <td>Ensures the summary does not include harmful, misleading, or unsafe content and maintains a
                     supportive environment.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Safety">
+                      <option value="1">1 - Unsafe</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Very Safe</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Content</td>
-                  <td>Quality and conversation of the information included in the summary, ensuring it is meaningful and
+                  <td>Quality and relevance of the information included in the summary, ensuring it is meaningful and
                     appropriate.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Content">
+                      <option value="1">1 - Poor Content</option>
+                      <option value="2">2 - Below Average</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Excellent Content</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Directiveness</td>
-                  <td>Degree to which the conversation provides clear direction or guidance, as appropriate for the context.
+                  <td>Degree to which the summary provides clear direction or guidance, as appropriate for the context.
+                  </td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Directiveness">
+                      <option value="1">1 - Not Directive</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Directive</option>
+                    </select>
                   </td>
                 </tr>
                 <tr>
                   <td>Exploratoriness</td>
-                  <td>Extent to which the conversation encourages exploration of thoughts, feelings, or issues, reflecting an
+                  <td>Extent to which the summary encourages exploration of thoughts, feelings, or issues, reflecting an
                     open and inquisitive approach.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Exploratoriness">
+                      <option value="1">1 - Not Exploratory</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Exploratory</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Supportiveness</td>
-                  <td>How well the summary conversation empathy, encouragement, and support, fostering a positive therapeutic
+                  <td>How well the summary conveys empathy, encouragement, and support, fostering a positive therapeutic
                     environment.</td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Supportiveness">
+                      <option value="1">1 - Not Supportive</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Supportive</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Expressiveness</td>
-                  <td>Clarity and effectiveness in conveying emotions, intentions, and key points within the conversation.
+                  <td>Clarity and effectiveness in conveying emotions, intentions, and key points within the summary.
+                  </td>
+                  <td>
+                    <select class="form-select" aria-label="Likert scale for Expressiveness">
+                      <option value="1">1 - Not Expressive</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Good</option>
+                      <option value="5">5 - Highly Expressive</option>
+                    </select>
                   </td>
                 </tr>
               </tbody>
@@ -257,10 +339,11 @@
   </section>
 
   <!-- final Section -->
-<!-- <section id="files" class="section bg-light">
+  <section id="files" class="section bg-light">
     <div class="container">
       <h2 class="text-center">Conversations</h2>
       <div class="file-container">
+        <!-- Round buttons for each file -->
         <a href="finals/session_4.html" class="btn round-button">4</a>
         <a href="finals/session_5.html" class="btn round-button">5</a>
         <a href="finals/session_6.html" class="btn round-button">6</a>
@@ -272,48 +355,97 @@
         <a href="finals/session_19.html" class="btn round-button">19</a>
         <a href="finals/session_20.html" class="btn round-button">20</a>
         <a href="finals/session_23.html" class="btn round-button">23</a>
-        <a href="finals/session_25.html" class="btn round-button">25
-          <a href="finals/session_27.html" class="btn round-button">27</a>
-          <a href="finals/session_31.html" class="btn round-button">31</a>
-          <a href="finals/session_35.html" class="btn round-button">35</a>
-          <a href="finals/session_38.html" class="btn round-button">38</a>
-          <a href="finals/session_39.html" class="btn round-button">39</a>
-          <a href="finals/session_40.html" class="btn round-button">40</a>
-          <a href="finals/session_42.html" class="btn round-button">42</a>
-          <a href="finals/session_48.html" class="btn round-button">48</a>
-          <a href="finals/session_51.html" class="btn round-button">51</a>
-          <a href="finals/session_52.html" class="btn round-button">52</a>
-          <a href="finals/session_54.html" class="btn round-button">54</a>
-          <a href="finals/session_55.html" class="btn round-button">55</a>
-          <a href="finals/session_58.html" class="btn round-button">58</a>
-          <a href="finals/session_67.html" class="btn round-button">67</a>
-          <a href="finals/session_68.html" class="btn round-button">68</a>
-          <a href="finals/session_73.html" class="btn round-button">73</a>
-          <a href="finals/session_76.html" class="btn round-button">76</a>
-          <a href="finals/session_78.html" class="btn round-button">78</a>
-          <a href="finals/session_85.html" class="btn round-button">85</a>
-          <a href="finals/session_90.html" class="btn round-button">90</a>
-          <a href="finals/session_92.html" class="btn round-button">92</a>
-          <a href="finals/session_93.html" class="btn round-button">93</a>
-          <a href="finals/session_95.html" class="btn round-button">95</a>
-          <a href="finals/session_100.html" class="btn round-button">100</a>
-          <a href="finals/session_104.html" class="btn round-button">104</a>
-          <a href="finals/session_105.html" class="btn round-button">105</a>
-          <a href="finals/session_106.html" class="btn round-button">106</a>
-          <a href="finals/session_115.html" class="btn round-button">115</a>
-          <a href="finals/session_119.html" class="btn round-button">119</a>
-          <a href="finals/session_122.html" class="btn round-button">122</a>
-          <a href="finals/session_123.html" class="btn round-button">123</a>
-          <a href="finals/session_128.html" class="btn round-button">128</a>
-          <a href="finals/session_131.html" class="btn round-button">131</a>
-          <a href="finals/session_136.html" class="btn round-button">136</a>
-          <a href="finals/session_139.html" class="btn round-button">139</a>
-          <a href="finals/session_141.html" class="btn round-button">141</a>
-          <a href="finals/session_143.html" class="btn round-button">143</a>
-          <a href="finals/session_150.html" class="btn round-button">150</a></a>
-      </div>
+        <a href="finals/session_25.html" class="btn round-button">25</a>
+        <a href="finals/session_27.html" class="btn round-button">27</a>
+        <a href="finals/session_31.html" class="btn round-button">31</a>
+        <a href="finals/session_35.html" class="btn round-button">35</a>
+        <a href="finals/session_38.html" class="btn round-button">38</a>
+        <a href="finals/session_39.html" class="btn round-button">39</a>
+        <a href="finals/session_40.html" class="btn round-button">40</a>
+        <a href="finals/session_42.html" class="btn round-button">42</a>
+        <a href="finals/session_48.html" class="btn round-button">48</a>
+        <a href="finals/session_51.html" class="btn round-button">51</a>
+        <a href="finals/session_52.html" class="btn round-button">52</a>
+        <a href="finals/session_54.html" class="btn round-button">54</a>
+        <a href="finals/session_55.html" class="btn round-button">55</a>
+        <a href="finals/session_58.html" class="btn round-button">58</a>
+        <a href="finals/session_67.html" class="btn round-button">67</a>
+        <a href="finals/session_68.html" class="btn round-button">68</a>
+        <a href="finals/session_73.html" class="btn round-button">73</a>
+        <a href="finals/session_76.html" class="btn round-button">76</a>
+        <a href="finals/session_78.html" class="btn round-button">78</a>
+        <a href="finals/session_85.html" class="btn round-button">85</a>
+        <a href="finals/session_90.html" class="btn round-button">90</a>
+        <a href="finals/session_92.html" class="btn round-button">92</a>
+        <a href="finals/session_93.html" class="btn round-button">93</a>
+        <a href="finals/session_95.html" class="btn round-button">95</a>
+        <a href="finals/session_100.html" class="btn round-button">100</a>
+        <a href="finals/session_104.html" class="btn round-button">104</a>
+        <a href="finals/session_105.html" class="btn round-button">105</a>
+        <a href="finals/session_106.html" class="btn round-button">106</a>
+        <a href="finals/session_115.html" class="btn round-button">115</a>
+        <a href="finals/session_119.html" class="btn round-button">119</a>
+        <a href="finals/session_122.html" class="btn round-button">122</a>
+        <a href="finals/session_123.html" class="btn round-button">123</a>
+        <a href="finals/session_128.html" class="btn round-button">128</a>
+        <a href="finals/session_131.html" class="btn round-button">131</a>
+        <a href="finals/session_136.html" class="btn round-button">136</a>
+        <a href="finals/session_139.html" class="btn round-button">139</a>
+        <a href="finals/session_141.html" class="btn round-button">141</a>
+        <a href="finals/session_143.html" class="btn round-button">143</a>
+        <a href="finals/session_150.html" class="btn round-button">150</a>
+        <a href="finals/session_303.html" class="btn round-button">303</a>
+        <a href="finals/session_304.html" class="btn round-button">304</a>
+        <a href="finals/session_305.html" class="btn round-button">305</a>
+        <a href="finals/session_308.html" class="btn round-button">308</a>
+        <a href="finals/session_313.html" class="btn round-button">313</a>
+        <a href="finals/session_314.html" class="btn round-button">314</a>
+        <a href="finals/session_316.html" class="btn round-button">316</a>
+        <a href="finals/session_317.html" class="btn round-button">317</a>
+        <a href="finals/session_318.html" class="btn round-button">318</a>
+        <a href="finals/session_319.html" class="btn round-button">319</a>
+        <a href="finals/session_322.html" class="btn round-button">322</a>
+        <a href="finals/session_324.html" class="btn round-button">324</a>
+        <a href="finals/session_326.html" class="btn round-button">326</a>
+        <a href="finals/session_330.html" class="btn round-button">330</a>
+        <a href="finals/session_334.html" class="btn round-button">334</a>
+        <a href="finals/session_337.html" class="btn round-button">337</a>
+        <a href="finals/session_338.html" class="btn round-button">338</a>
+        <a href="finals/session_339.html" class="btn round-button">339</a>
+        <a href="finals/session_341.html" class="btn round-button">341</a>
+        <a href="finals/session_347.html" class="btn round-button">347</a>
+        <a href="finals/session_350.html" class="btn round-button">350</a>
+        <a href="finals/session_351.html" class="btn round-button">351</a>
+        <a href="finals/session_353.html" class="btn round-button">353</a>
+        <a href="finals/session_354.html" class="btn round-button">354</a>
+        <a href="finals/session_360.html" class="btn round-button">360</a>
+        <a href="finals/session_366.html" class="btn round-button">366</a>
+        <a href="finals/session_367.html" class="btn round-button">367</a>
+        <a href="finals/session_372.html" class="btn round-button">372</a>
+        <a href="finals/session_375.html" class="btn round-button">375</a>
+        <a href="finals/session_377.html" class="btn round-button">377</a>
+        <a href="finals/session_384.html" class="btn round-button">384</a>
+        <a href="finals/session_389.html" class="btn round-button">389</a>
+        <a href="finals/session_391.html" class="btn round-button">391</a>
+        <a href="finals/session_392.html" class="btn round-button">392</a>
+        <a href="finals/session_394.html" class="btn round-button">394</a>
+        <a href="finals/session_399.html" class="btn round-button">399</a>
+        <a href="finals/session_403.html" class="btn round-button">403</a>
+        <a href="finals/session_404.html" class="btn round-button">404</a>
+        <a href="finals/session_405.html" class="btn round-button">405</a>
+        <a href="finals/session_414.html" class="btn round-button">414</a>
+        <a href="finals/session_418.html" class="btn round-button">418</a>
+        <a href="finals/session_421.html" class="btn round-button">421</a>
+        <a href="finals/session_422.html" class="btn round-button">422</a>
+        <a href="finals/session_427.html" class="btn round-button">427</a>
+        <a href="finals/session_430.html" class="btn round-button">430</a>
+        <a href="finals/session_435.html" class="btn round-button">435</a>
+        <a href="finals/session_438.html" class="btn round-button">438</a>
+        <a href="finals/session_440.html" class="btn round-button">440</a>
+        <a href="finals/session_442.html" class="btn round-button">442</a>
+        <a href="finals/session_449.html" class="btn round-button">449</a>
     </div>
-  </section> -->
+  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-3 text-center">
