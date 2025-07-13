@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ConvTrave 3.0 | IITD</title>
+  <title>ConvTrave | IITD</title>
   <link rel="icon" type="image/x-icon" href="/img/icon.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,6 +65,12 @@
 
     .horizontal-timeline .items {
       border-top: 3px solid #e9ecef;
+      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 0;
+      margin-bottom: 0;
     }
 
     .horizontal-timeline .items .items-list {
@@ -73,6 +79,9 @@
       text-align: center;
       padding-top: 70px;
       margin-right: 0;
+      flex: 1 1 30%;
+      min-width: 220px;
+      box-sizing: border-box;
     }
 
     .horizontal-timeline .items .items-list:before {
@@ -81,6 +90,8 @@
       height: 36px;
       border-right: 2px dashed #dee2e6;
       top: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .horizontal-timeline .items .items-list .event-date {
@@ -94,6 +105,29 @@
       padding-top: 8px;
     }
 
+    @media (max-width: 991.98px) {
+      .horizontal-timeline .items {
+        flex-direction: column;
+        border-top: none;
+      }
+      .horizontal-timeline .items .items-list {
+        width: 100%;
+        min-width: unset;
+        padding-top: 40px;
+        margin-bottom: 30px;
+      }
+      .horizontal-timeline .items .items-list:before {
+        left: 50%;
+        top: 0;
+        height: 36px;
+        border-right: 2px dashed #dee2e6;
+        border-top: none;
+      }
+      .horizontal-timeline .items .items-list .event-date {
+        top: 36px;
+      }
+    }
+
     @media (min-width: 1140px) {
       .horizontal-timeline .items .items-list {
         display: inline-block;
@@ -103,6 +137,43 @@
 
       .horizontal-timeline .items .items-list .event-date {
         top: -40px;
+      }
+    }
+
+    /* Responsive file-container for better mobile layout */
+    .file-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    @media (max-width: 576px) {
+      .file-container {
+        gap: 4px;
+      }
+      .round-button {
+        width: 44px;
+        height: 44px;
+        font-size: 13px;
+        margin: 4px;
+      }
+      .card-body {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    /* Responsive table */
+    .responsive-table {
+      overflow-x: auto;
+      width: 100%;
+    }
+    @media (max-width: 767.98px) {
+      .responsive-table table {
+        font-size: 13px;
+      }
+      .responsive-table th,
+      .responsive-table td {
+        white-space: nowrap;
       }
     }
   </style>
@@ -170,22 +241,22 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="horizontal-timeline">
-              <ul class="list-inline items" style="width:100%;display:flex;justify-content:space-between;">
-                <li class="list-inline-item items-list" style="flex:1;">
+              <ul class="list-inline items">
+                <li class="list-inline-item items-list">
                   <div class="px-4">
                     <div class="event-date badge bg-info">Step 01</div>
                     <h5 class="pt-2">Select assigned file</h5>
                     <p class="text-muted">From the following section, select the file assigned to you.</p>
                   </div>
                 </li>
-                <li class="list-inline-item items-list" style="flex:1;">
+                <li class="list-inline-item items-list">
                   <div class="px-4">
                     <div class="event-date badge bg-success">Step 02</div>
                     <h5 class="pt-2">Read the Conversations</h5>
                     <p class="text-muted">Read the conversation between the therapist and the patients.</p>
                   </div>
                 </li>
-                <li class="list-inline-item items-list" style="flex:1;">
+                <li class="list-inline-item items-list">
                   <div class="px-4">
                     <div class="event-date badge bg-warning">Step 03</div>
                     <h5 class="pt-2">Fill the form</h5>
@@ -195,7 +266,8 @@
               </ul>
             </div>
           </div>
-            <table class="table table-bordered table-striped">
+          <div class="responsive-table mt-4">
+            <table class="table table-bordered table-striped mb-0">
               <thead class="table-dark">
                 <tr>
                   <th>Criterion</th>
@@ -259,109 +331,159 @@
   <!-- final Section -->
   <section id="files" class="section bg-light">
     <div class="container">
-      <h2 class="text-center">Conversations</h2>
-      <div class="file-container">
-        <!-- Round buttons for each file -->
-        <a href="finals/session_4.html" class="btn round-button">4</a>
-        <a href="finals/session_5.html" class="btn round-button">5</a>
-        <a href="finals/session_6.html" class="btn round-button">6</a>
-        <a href="finals/session_9.html" class="btn round-button">9</a>
-        <a href="finals/session_11.html" class="btn round-button">11</a>
-        <a href="finals/session_14.html" class="btn round-button">14</a>
-        <a href="finals/session_15.html" class="btn round-button">15</a>
-        <a href="finals/session_18.html" class="btn round-button">18</a>
-        <a href="finals/session_19.html" class="btn round-button">19</a>
-        <a href="finals/session_20.html" class="btn round-button">20</a>
-        <a href="finals/session_23.html" class="btn round-button">23</a>
-        <a href="finals/session_25.html" class="btn round-button">25</a>
-        <a href="finals/session_27.html" class="btn round-button">27</a>
-        <a href="finals/session_31.html" class="btn round-button">31</a>
-        <a href="finals/session_35.html" class="btn round-button">35</a>
-        <a href="finals/session_38.html" class="btn round-button">38</a>
-        <a href="finals/session_39.html" class="btn round-button">39</a>
-        <a href="finals/session_40.html" class="btn round-button">40</a>
-        <a href="finals/session_42.html" class="btn round-button">42</a>
-        <a href="finals/session_48.html" class="btn round-button">48</a>
-        <a href="finals/session_51.html" class="btn round-button">51</a>
-        <a href="finals/session_52.html" class="btn round-button">52</a>
-        <a href="finals/session_54.html" class="btn round-button">54</a>
-        <a href="finals/session_55.html" class="btn round-button">55</a>
-        <a href="finals/session_58.html" class="btn round-button">58</a>
-        <a href="finals/session_67.html" class="btn round-button">67</a>
-        <a href="finals/session_68.html" class="btn round-button">68</a>
-        <a href="finals/session_73.html" class="btn round-button">73</a>
-        <a href="finals/session_76.html" class="btn round-button">76</a>
-        <a href="finals/session_78.html" class="btn round-button">78</a>
-        <a href="finals/session_85.html" class="btn round-button">85</a>
-        <a href="finals/session_90.html" class="btn round-button">90</a>
-        <a href="finals/session_92.html" class="btn round-button">92</a>
-        <a href="finals/session_93.html" class="btn round-button">93</a>
-        <a href="finals/session_95.html" class="btn round-button">95</a>
-        <a href="finals/session_100.html" class="btn round-button">100</a>
-        <a href="finals/session_104.html" class="btn round-button">104</a>
-        <a href="finals/session_105.html" class="btn round-button">105</a>
-        <a href="finals/session_106.html" class="btn round-button">106</a>
-        <a href="finals/session_115.html" class="btn round-button">115</a>
-        <a href="finals/session_119.html" class="btn round-button">119</a>
-        <a href="finals/session_122.html" class="btn round-button">122</a>
-        <a href="finals/session_123.html" class="btn round-button">123</a>
-        <a href="finals/session_128.html" class="btn round-button">128</a>
-        <a href="finals/session_131.html" class="btn round-button">131</a>
-        <a href="finals/session_136.html" class="btn round-button">136</a>
-        <a href="finals/session_139.html" class="btn round-button">139</a>
-        <a href="finals/session_141.html" class="btn round-button">141</a>
-        <a href="finals/session_143.html" class="btn round-button">143</a>
-        <a href="finals/session_150.html" class="btn round-button">150</a>
-        <a href="finals/session_303.html" class="btn round-button">303</a>
-        <a href="finals/session_304.html" class="btn round-button">304</a>
-        <a href="finals/session_305.html" class="btn round-button">305</a>
-        <a href="finals/session_308.html" class="btn round-button">308</a>
-        <a href="finals/session_313.html" class="btn round-button">313</a>
-        <a href="finals/session_314.html" class="btn round-button">314</a>
-        <a href="finals/session_316.html" class="btn round-button">316</a>
-        <a href="finals/session_317.html" class="btn round-button">317</a>
-        <a href="finals/session_318.html" class="btn round-button">318</a>
-        <a href="finals/session_319.html" class="btn round-button">319</a>
-        <a href="finals/session_322.html" class="btn round-button">322</a>
-        <a href="finals/session_324.html" class="btn round-button">324</a>
-        <a href="finals/session_326.html" class="btn round-button">326</a>
-        <a href="finals/session_330.html" class="btn round-button">330</a>
-        <a href="finals/session_334.html" class="btn round-button">334</a>
-        <a href="finals/session_337.html" class="btn round-button">337</a>
-        <a href="finals/session_338.html" class="btn round-button">338</a>
-        <a href="finals/session_339.html" class="btn round-button">339</a>
-        <a href="finals/session_341.html" class="btn round-button">341</a>
-        <a href="finals/session_347.html" class="btn round-button">347</a>
-        <a href="finals/session_350.html" class="btn round-button">350</a>
-        <a href="finals/session_351.html" class="btn round-button">351</a>
-        <a href="finals/session_353.html" class="btn round-button">353</a>
-        <a href="finals/session_354.html" class="btn round-button">354</a>
-        <a href="finals/session_360.html" class="btn round-button">360</a>
-        <a href="finals/session_366.html" class="btn round-button">366</a>
-        <a href="finals/session_367.html" class="btn round-button">367</a>
-        <a href="finals/session_372.html" class="btn round-button">372</a>
-        <a href="finals/session_375.html" class="btn round-button">375</a>
-        <a href="finals/session_377.html" class="btn round-button">377</a>
-        <a href="finals/session_384.html" class="btn round-button">384</a>
-        <a href="finals/session_389.html" class="btn round-button">389</a>
-        <a href="finals/session_391.html" class="btn round-button">391</a>
-        <a href="finals/session_392.html" class="btn round-button">392</a>
-        <a href="finals/session_394.html" class="btn round-button">394</a>
-        <a href="finals/session_399.html" class="btn round-button">399</a>
-        <a href="finals/session_403.html" class="btn round-button">403</a>
-        <a href="finals/session_404.html" class="btn round-button">404</a>
-        <a href="finals/session_405.html" class="btn round-button">405</a>
-        <a href="finals/session_414.html" class="btn round-button">414</a>
-        <a href="finals/session_418.html" class="btn round-button">418</a>
-        <a href="finals/session_421.html" class="btn round-button">421</a>
-        <a href="finals/session_422.html" class="btn round-button">422</a>
-        <a href="finals/session_427.html" class="btn round-button">427</a>
-        <a href="finals/session_430.html" class="btn round-button">430</a>
-        <a href="finals/session_435.html" class="btn round-button">435</a>
-        <a href="finals/session_438.html" class="btn round-button">438</a>
-        <a href="finals/session_440.html" class="btn round-button">440</a>
-        <a href="finals/session_442.html" class="btn round-button">442</a>
-        <a href="finals/session_449.html" class="btn round-button">449</a>
+      <h2 class="text-center mb-4">Conversations</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Set A -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold text-center mb-3">Set A</h5>
+              <div class="file-container justify-content-center">
+                <a href="finals/session_4.html" class="btn round-button">4</a>
+                <a href="finals/session_14.html" class="btn round-button">14</a>
+                <a href="finals/session_23.html" class="btn round-button">23</a>
+                <a href="finals/session_38.html" class="btn round-button">38</a>
+                <a href="finals/session_51.html" class="btn round-button">51</a>
+                <a href="finals/session_67.html" class="btn round-button">67</a>
+                <a href="finals/session_85.html" class="btn round-button">85</a>
+                <a href="finals/session_100.html" class="btn round-button">100</a>
+                <a href="finals/session_119.html" class="btn round-button">119</a>
+                <a href="finals/session_136.html" class="btn round-button">136</a>
+                <a href="finals/session_303.html" class="btn round-button">303</a>
+                <a href="finals/session_314.html" class="btn round-button">314</a>
+                <a href="finals/session_322.html" class="btn round-button">322</a>
+                <a href="finals/session_337.html" class="btn round-button">337</a>
+                <a href="finals/session_350.html" class="btn round-button">350</a>
+                <a href="finals/session_366.html" class="btn round-button">366</a>
+                <a href="finals/session_384.html" class="btn round-button">384</a>
+                <a href="finals/session_399.html" class="btn round-button">399</a>
+                <a href="finals/session_418.html" class="btn round-button">418</a>
+                <a href="finals/session_435.html" class="btn round-button">435</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Set B -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold text-center mb-3">Set B</h5>
+              <div class="file-container justify-content-center">
+                <a href="finals/session_5.html" class="btn round-button">5</a>
+                <a href="finals/session_15.html" class="btn round-button">15</a>
+                <a href="finals/session_25.html" class="btn round-button">25</a>
+                <a href="finals/session_39.html" class="btn round-button">39</a>
+                <a href="finals/session_52.html" class="btn round-button">52</a>
+                <a href="finals/session_68.html" class="btn round-button">68</a>
+                <a href="finals/session_90.html" class="btn round-button">90</a>
+                <a href="finals/session_104.html" class="btn round-button">104</a>
+                <a href="finals/session_122.html" class="btn round-button">122</a>
+                <a href="finals/session_139.html" class="btn round-button">139</a>
+                <a href="finals/session_304.html" class="btn round-button">304</a>
+                <a href="finals/session_316.html" class="btn round-button">316</a>
+                <a href="finals/session_324.html" class="btn round-button">324</a>
+                <a href="finals/session_338.html" class="btn round-button">338</a>
+                <a href="finals/session_351.html" class="btn round-button">351</a>
+                <a href="finals/session_367.html" class="btn round-button">367</a>
+                <a href="finals/session_389.html" class="btn round-button">389</a>
+                <a href="finals/session_403.html" class="btn round-button">403</a>
+                <a href="finals/session_421.html" class="btn round-button">421</a>
+                <a href="finals/session_438.html" class="btn round-button">438</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Set C -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold text-center mb-3">Set C</h5>
+              <div class="file-container justify-content-center">
+                <a href="finals/session_6.html" class="btn round-button">6</a>
+                <a href="finals/session_18.html" class="btn round-button">18</a>
+                <a href="finals/session_27.html" class="btn round-button">27</a>
+                <a href="finals/session_40.html" class="btn round-button">40</a>
+                <a href="finals/session_54.html" class="btn round-button">54</a>
+                <a href="finals/session_73.html" class="btn round-button">73</a>
+                <a href="finals/session_92.html" class="btn round-button">92</a>
+                <a href="finals/session_105.html" class="btn round-button">105</a>
+                <a href="finals/session_123.html" class="btn round-button">123</a>
+                <a href="finals/session_141.html" class="btn round-button">141</a>
+                <a href="finals/session_305.html" class="btn round-button">305</a>
+                <a href="finals/session_317.html" class="btn round-button">317</a>
+                <a href="finals/session_326.html" class="btn round-button">326</a>
+                <a href="finals/session_339.html" class="btn round-button">339</a>
+                <a href="finals/session_353.html" class="btn round-button">353</a>
+                <a href="finals/session_372.html" class="btn round-button">372</a>
+                <a href="finals/session_391.html" class="btn round-button">391</a>
+                <a href="finals/session_404.html" class="btn round-button">404</a>
+                <a href="finals/session_422.html" class="btn round-button">422</a>
+                <a href="finals/session_440.html" class="btn round-button">440</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Set D -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold text-center mb-3">Set D</h5>
+              <div class="file-container justify-content-center">
+                <a href="finals/session_9.html" class="btn round-button">9</a>
+                <a href="finals/session_19.html" class="btn round-button">19</a>
+                <a href="finals/session_31.html" class="btn round-button">31</a>
+                <a href="finals/session_42.html" class="btn round-button">42</a>
+                <a href="finals/session_55.html" class="btn round-button">55</a>
+                <a href="finals/session_76.html" class="btn round-button">76</a>
+                <a href="finals/session_93.html" class="btn round-button">93</a>
+                <a href="finals/session_106.html" class="btn round-button">106</a>
+                <a href="finals/session_128.html" class="btn round-button">128</a>
+                <a href="finals/session_143.html" class="btn round-button">143</a>
+                <a href="finals/session_308.html" class="btn round-button">308</a>
+                <a href="finals/session_318.html" class="btn round-button">318</a>
+                <a href="finals/session_330.html" class="btn round-button">330</a>
+                <a href="finals/session_341.html" class="btn round-button">341</a>
+                <a href="finals/session_354.html" class="btn round-button">354</a>
+                <a href="finals/session_375.html" class="btn round-button">375</a>
+                <a href="finals/session_392.html" class="btn round-button">392</a>
+                <a href="finals/session_405.html" class="btn round-button">405</a>
+                <a href="finals/session_427.html" class="btn round-button">427</a>
+                <a href="finals/session_442.html" class="btn round-button">442</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Set E -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold text-center mb-3">Set E</h5>
+              <div class="file-container justify-content-center">
+                <a href="finals/session_11.html" class="btn round-button">11</a>
+                <a href="finals/session_20.html" class="btn round-button">20</a>
+                <a href="finals/session_35.html" class="btn round-button">35</a>
+                <a href="finals/session_48.html" class="btn round-button">48</a>
+                <a href="finals/session_58.html" class="btn round-button">58</a>
+                <a href="finals/session_78.html" class="btn round-button">78</a>
+                <a href="finals/session_95.html" class="btn round-button">95</a>
+                <a href="finals/session_115.html" class="btn round-button">115</a>
+                <a href="finals/session_131.html" class="btn round-button">131</a>
+                <a href="finals/session_150.html" class="btn round-button">150</a>
+                <a href="finals/session_313.html" class="btn round-button">313</a>
+                <a href="finals/session_319.html" class="btn round-button">319</a>
+                <a href="finals/session_334.html" class="btn round-button">334</a>
+                <a href="finals/session_347.html" class="btn round-button">347</a>
+                <a href="finals/session_360.html" class="btn round-button">360</a>
+                <a href="finals/session_377.html" class="btn round-button">377</a>
+                <a href="finals/session_394.html" class="btn round-button">394</a>
+                <a href="finals/session_414.html" class="btn round-button">414</a>
+                <a href="finals/session_430.html" class="btn round-button">430</a>
+                <a href="finals/session_449.html" class="btn round-button">449</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
